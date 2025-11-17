@@ -1,0 +1,16 @@
+---
+import Link from "./Link.astro";
+
+const links = [
+    {title: 'Link 1', url: 'https://myrkos-dw2.netlify.app/'},
+    {title: 'Link 2', url: 'https://myrkos-dw2.netlify.app/'},
+
+]
+
+
+
+---
+
+{links.map(function(link){
+    return <Link data={link}/>
+})}
