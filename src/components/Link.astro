@@ -1,5 +1,18 @@
 ---
 const {data}= Astro.props;
 ---
+<div class="starburst">
 
-<a href={data.url}>{data.title}</a>
+  <a href={data.url}>{data.title}</a>
+
+</div>
+
+<style>
+
+.starburst {
+  width: 100px; /* adjust to control the size */
+  aspect-ratio: 1;
+  clip-path: polygon(100% 50%,calc(93.3% - 15.59rem) calc(75% - 9rem),75% 93.3%,calc(50% - 0rem) calc(100% - 18rem),25% 93.3%,calc(6.7% - -15.59rem) calc(75% - 9rem),0% 50%,calc(6.7% - -15.59rem) calc(25% - -9rem),25% 6.7%,calc(50% - 0rem) calc(0% - -18rem),75% 6.7%,calc(93.3% - 15.59rem) calc(25% - -9rem));
+}
+
+</style>
