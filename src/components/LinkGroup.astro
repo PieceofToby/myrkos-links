@@ -4,13 +4,29 @@ import Link from "./Link.astro";
 const links = [
     {title: 'LinkedIn', url: 'https://www.linkedin.com/in/myrkos-diaz/'},
     {title: 'Portfolio', url: 'https://myrkosdiaz.com/'},
+    {title: 'Portfolio', url: 'https://myrkosdiaz.com/'},
+    {title: 'Portfolio', url: 'https://myrkosdiaz.com/'},
+    {title: 'Portfolio', url: 'https://myrkosdiaz.com/'},
 
 ]
 
 
 
 ---
+<div>
 
 {links.map(function(link){
     return <Link data={link}/>
 })}
+
+</div>
+
+<style>
+
+div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+</style>

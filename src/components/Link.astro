@@ -1,18 +1,59 @@
 ---
 const {data}= Astro.props;
 ---
-<div class="starburst">
+<a href={data.url} class="starburst">
 
-  <a href={data.url}>{data.title}</a>
+  <span>{data.title}</span>
 
-</div>
+</a>
 
 <style>
 
 .starburst {
-  width: 100px; /* adjust to control the size */
+  background-image: url(/star-346-2.svg);
+  background-size: 100% 100%;
+  width: 200px; /* adjust to control the size */
   aspect-ratio: 1;
-  clip-path: polygon(100% 50%,calc(93.3% - 15.59rem) calc(75% - 9rem),75% 93.3%,calc(50% - 0rem) calc(100% - 18rem),25% 93.3%,calc(6.7% - -15.59rem) calc(75% - 9rem),0% 50%,calc(6.7% - -15.59rem) calc(25% - -9rem),25% 6.7%,calc(50% - 0rem) calc(0% - -18rem),75% 6.7%,calc(93.3% - 15.59rem) calc(25% - -9rem));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease-in-out 4.5s;
+  text-decoration: none;
+  font-size: xx-large;
+  color: aliceblue;
+  overflow: visible;
+  backdrop-filter:
+    inset 0 0 50px #fff,      /* inner white */
+    inset 20px 0 80px #f0f,   /* inner left magenta short */
+    inset -20px 0 80px #0ff,  /* inner right cyan short */
+    inset 20px 0 300px #f0f,  /* inner left magenta broad */
+    inset -20px 0 300px #0ff, /* inner right cyan broad */
+    0 0 50px #fff,            /* outer white */
+    -10px 0 80px #f0f,        /* outer left magenta */
+    10px 0 80px #0ff;         /* outer right cyan */
 }
+
+.starburst::after {
+  content: "";
+  position: fixed;
+  background-color: black;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.starburst:hover::after {
+  opacity: .5;
+
+}
+
+
+.starburst:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
 
 </style>
