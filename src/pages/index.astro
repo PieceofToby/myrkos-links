@@ -11,6 +11,9 @@ import LinkGroup from "@components/LinkGroup.astro";
 <Layout title="Astro Starter">
     <header>
       <h1 class="glow">Myrkos' Link Tree</h1>
+        <button id="btnDark">Dark yet Darker Mode</button>
+
+        <button id="btnLight">Yet even Lighter Mode</button>
     </header>
   
   <Container>
@@ -25,6 +28,25 @@ import LinkGroup from "@components/LinkGroup.astro";
 </div>
 
 </Layout>
+
+<script>
+const btnDark = document.querySelector('#btnDark');
+
+  const setDark = function() {
+    document.documentElement.style.colorScheme = "dark";
+  }
+
+  btnDark.addEventListener('click', setDark);
+
+const btnLight = document.querySelector('#btnLight');
+
+  const setLight = function() {
+    document.documentElement.style.colorScheme = "light";
+  }
+
+  btnLight.addEventListener('click', setLight);
+
+</script>
 
 <style>
 /* customizable snowflake styling */
@@ -63,6 +85,21 @@ header {
 .hong {
   transform: scaleX(-1);
   filter: drop-shadow(0 0 0.75rem rgb(255, 253, 241));
+}
+</style>
+
+<style is:global>
+:root{
+  --theme-dark-fg: #9CB5D2;
+  --theme-dark-bg: #194679;
+  --theme-dark-accent: #3BBCF4;
+  --theme-dark-button: #9ddbff;
+  --theme-dark-btntext: #0f2083;
+  --theme-dark-details: #1e4f6b;
+  --theme-dark-summary: #2d658a;
+
+ 
+
 }
 
 </style>

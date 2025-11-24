@@ -2,18 +2,45 @@
 // we can import fonts here, after installing them via Fontsource
 // see https://fontsource.org/docs/installation for instructions
 import "@fontsource/karla";
+// Supports weights 100-900
+import "@fontsource-variable/outfit";
 ---
 
 <style is:global>
   /* We can use this style tag to set up colors, fonts, etc. */
   :root {
-    --color-background: rgb(11, 23, 77);
-    --color-text: rgb(240, 240, 240);
-    --color-accent: rgb(140, 233, 250);
     --color-focus-ring: rgb(255, 0, 255);
 
-    --font-body: "Karla", sans-serif;
-    --font-headings: "Karla", sans-serif;
+    --theme-dark-bg: #0b174d;
+    --theme-dark-fg: #f0f0f0;
+    --theme-dark-accent: #8ce9fa;
+    --theme-dark-button: #9ddbff;
+    --theme-dark-btntext: #0f2083;
+    --theme-dark-details: #1e4f6b;
+    --theme-dark-summary: #2d658a;
+
+    
+    --theme-light-fg: #275283 ;
+    --theme-light-bg: #E3F0FF ;
+    --theme-light-accent: #F43B63 ;
+    --theme-light-button: #203de2;
+    --theme-light-btntext: #f1faff;
+    --theme-light-details: #5aa0c9;
+    --theme-light-summary: #9ddbff;
+
+      color-scheme: light dark;
+
+    --color-fg:light-dark(var(--theme-light-fg), var(--theme-dark-fg));
+    --color-bg:light-dark(var(--theme-light-bg), var(--theme-dark-bg));
+    --color-accent:light-dark(var(--theme-light-accent), var(--theme-dark-accent));
+    --color-button:light-dark(var(--theme-light-button), var(--theme-dark-button));
+    --color-btntext:light-dark(var(--theme-light-btntext), var(--theme-dark-btntext));
+    --color-details:light-dark(var(--theme-light-details), var(--theme-dark-details));
+    --color-summary:light-dark(var(--theme-light-summary), var(--theme-dark-summary));
+  
+
+    --font-body: "Outfit Variable", sans-serif;
+    --font-headings: "Outfit Variable", sans-serif;
 
     font-size: 18px;
 
@@ -24,8 +51,8 @@ import "@fontsource/karla";
 
   /* We can also apply these colors as a default */
   body {
-    background-color: var(--color-background);
-    color: var(--color-text);
+    background-color: var(--color-bg);
+    color: var(--color-fg);
     font-family: var(--font-body);
   }
   h1,
@@ -36,6 +63,12 @@ import "@fontsource/karla";
   h6 {
     color: var(--color-accent);
   }
+
+  button {
+  background-color: var(--color-button);
+  color: var(--color-btntext);
+  padding: 1rem;
+}
 
   /* default focus ring styles */
   *:focus-visible {
