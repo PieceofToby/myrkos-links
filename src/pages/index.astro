@@ -10,10 +10,14 @@ import LinkGroup from "@components/LinkGroup.astro";
 
 <Layout title="Astro Starter">
     <header>
-      <h1 class="glow">Myrkos' Link Tree</h1>
+     <div>
+        <h1>Myrkos' beautiful fucking links</h1>      
+     </div>
+      
         <button id="btnDark">Dark yet Darker Mode</button>
 
         <button id="btnLight">Yet even Lighter Mode</button>
+
     </header>
   
   <Container>
@@ -21,9 +25,6 @@ import LinkGroup from "@components/LinkGroup.astro";
   </Container>
 
 <div class="hongparent">
-  <img class="desktop-and-tablet hong" style="max-height: 
-  30%; max-width: 35%; position: fixed; right: 10px; bottom: 10px; z-index: 102;" 
-  title="CUSTOM_FLOAT_TEXT" src="https://limbuscompany.wiki.gg/images/LCB_Sinner_Hong_Lu_Idle_Animation.gif" />
 
 </div>
 
@@ -57,11 +58,37 @@ const btnLight = document.querySelector('#btnLight');
   text-shadow: 0 0 5px #ecb336;
 }
 
-.snowflake,.snowflake .inner{animation-iteration-count:infinite;animation-play-state:running}@keyframes snowflakes-fall{0%{transform:translateY(0)}100%{transform:translateY(110vh)}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;user-select:none;cursor:default;pointer-events:none;animation-name:snowflakes-shake;animation-duration:3s;animation-timing-function:ease-in-out}.snowflake .inner{animation-duration:10s;animation-name:snowflakes-fall;animation-timing-function:linear}.snowflake:nth-of-type(0){left:1%;animation-delay:0s}.snowflake:nth-of-type(0) .inner{animation-delay:0s}.snowflake:first-of-type{left:10%;animation-delay:1s}.snowflake:first-of-type .inner,.snowflake:nth-of-type(8) .inner{animation-delay:1s}.snowflake:nth-of-type(2){left:20%;animation-delay:.5s}.snowflake:nth-of-type(2) .inner,.snowflake:nth-of-type(6) .inner{animation-delay:6s}.snowflake:nth-of-type(3){left:30%;animation-delay:2s}.snowflake:nth-of-type(11) .inner,.snowflake:nth-of-type(3) .inner{animation-delay:4s}.snowflake:nth-of-type(4){left:40%;animation-delay:2s}.snowflake:nth-of-type(10) .inner,.snowflake:nth-of-type(4) .inner{animation-delay:2s}.snowflake:nth-of-type(5){left:50%;animation-delay:3s}.snowflake:nth-of-type(5) .inner{animation-delay:8s}.snowflake:nth-of-type(6){left:60%;animation-delay:2s}.snowflake:nth-of-type(7){left:70%;animation-delay:1s}.snowflake:nth-of-type(7) .inner{animation-delay:2.5s}.snowflake:nth-of-type(8){left:80%;animation-delay:0s}.snowflake:nth-of-type(9){left:90%;animation-delay:1.5s}.snowflake:nth-of-type(9) .inner{animation-delay:3s}.snowflake:nth-of-type(10){left:25%;animation-delay:0s}.snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
+.snowflake,.snowflake .inner{animation-iteration-count:infinite;animation-play-state:running}
+@keyframes snowflakes-fall{0%{transform:translateY(0)}100%{transform:translateY(110vh)}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;user-select:none;cursor:default;pointer-events:none;animation-name:snowflakes-shake;animation-duration:3s;animation-timing-function:ease-in-out}.snowflake .inner{animation-duration:10s;animation-name:snowflakes-fall;animation-timing-function:linear}.snowflake:nth-of-type(0){left:1%;animation-delay:0s}.snowflake:nth-of-type(0) .inner{animation-delay:0s}.snowflake:first-of-type{left:10%;animation-delay:1s}.snowflake:first-of-type .inner,.snowflake:nth-of-type(8) .inner{animation-delay:1s}.snowflake:nth-of-type(2){left:20%;animation-delay:.5s}.snowflake:nth-of-type(2) .inner,.snowflake:nth-of-type(6) .inner{animation-delay:6s}.snowflake:nth-of-type(3){left:30%;animation-delay:2s}.snowflake:nth-of-type(11) .inner,.snowflake:nth-of-type(3) .inner{animation-delay:4s}.snowflake:nth-of-type(4){left:40%;animation-delay:2s}.snowflake:nth-of-type(10) .inner,.snowflake:nth-of-type(4) .inner{animation-delay:2s}.snowflake:nth-of-type(5){left:50%;animation-delay:3s}.snowflake:nth-of-type(5) .inner{animation-delay:8s}.snowflake:nth-of-type(6){left:60%;animation-delay:2s}.snowflake:nth-of-type(7){left:70%;animation-delay:1s}.snowflake:nth-of-type(7) .inner{animation-delay:2.5s}.snowflake:nth-of-type(8){left:80%;animation-delay:0s}.snowflake:nth-of-type(9){left:90%;animation-delay:1.5s}.snowflake:nth-of-type(9) .inner{animation-delay:3s}.snowflake:nth-of-type(10){left:25%;animation-delay:0s}.snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
 
 header {
   text-align: center;
   padding: 2.5rem;
+}
+
+.hongparent {
+  transform: scaleX(-1);
+  filter: drop-shadow(0 0 0.75rem rgb(255, 253, 241));
+  height: 350px; 
+  width: 350px; 
+  position: fixed; 
+  right: 10px; 
+  bottom: 10px; 
+  z-index: 102; 
+  background-repeat:no-repeat; 
+  background-position: center; 
+  background-size: contain ;
+  background-image: url('https://limbuscompany.wiki.gg/images/LCB_Sinner_Hong_Lu_Idle_Animation.gif');
+}
+
+.hongparent:hover {
+  position: fixed;
+  right: 10px; 
+  bottom: 10px; 
+  z-index: 102; 
+  height: 800px; 
+  width: 1000px; 
+  background-image: url('https://limbuscompany.wiki.gg/images/LCB_Sinner_Hong_Lu_Skill_3.gif')
 }
 
 .glow {
@@ -73,21 +100,17 @@ header {
   animation: glow 1s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes glow {
+@keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #b561ec, 0 0 40px #b561ec, 0 0 50px #b561ec, 0 0 60px #b561ec, 0 0 70px #b561ec;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--color-glowa), 0 0 40px var(--color-glowa), 0 0 50px var(--color-glowa), 0 0 60px var(--color-glowa), 0 0 70px var(--color-glowa);
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #7714b9, 0 0 40px #7714b9, 0 0 50px #7714b9, 0 0 60px #7714b9, 0 0 70px #7714b9, 0 0 80px #7714b9;
+    text-shadow: 0 0 20px #fff, 0 0 30px var(--color-glowb), 0 0 40px var(--color-glowb), 0 0 50px var(--color-glowb), 0 0 60px var(--color-glowb), 0 0 70px var(--color-glowb), 0 0 80px var(--color-glowb);
   }
 }
 
-.hong {
-  transform: scaleX(-1);
-  filter: drop-shadow(0 0 0.75rem rgb(255, 253, 241));
-}
-</style>
 
+</style>
 
 <div class="snowflakes" aria-hidden="true">
   <div class="snowflake">

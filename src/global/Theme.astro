@@ -18,6 +18,8 @@ import "@fontsource-variable/outfit";
     --theme-dark-btntext: #140979;
     --theme-dark-details: #1e4f6b;
     --theme-dark-summary: #2d658a;
+    --theme-dark-glowa: #b561ec;
+    --theme-dark-glowb: #7714b9;
 
     
     --theme-light-fg: #8eb6e3 ;
@@ -27,6 +29,8 @@ import "@fontsource-variable/outfit";
     --theme-light-btntext: #f1faff;
     --theme-light-details: #5aa0c9;
     --theme-light-summary: #9ddbff;
+    --theme-light-glowa: #2781e9;
+    --theme-light-glowb: #1461b9;
 
       color-scheme: light dark;
 
@@ -37,7 +41,11 @@ import "@fontsource-variable/outfit";
     --color-btntext:light-dark(var(--theme-light-btntext), var(--theme-dark-btntext));
     --color-details:light-dark(var(--theme-light-details), var(--theme-dark-details));
     --color-summary:light-dark(var(--theme-light-summary), var(--theme-dark-summary));
-  
+    --color-glowa:light-dark(var(--theme-light-glowa), var(--theme-dark-glowa));
+    --color-glowb:light-dark(var(--theme-light-glowb), var(--theme-dark-glowb));
+    --show-dark: light-dark(block, none);
+    --show-light: light-dark(none, block);
+
 
     --font-body: "Outfit Variable", sans-serif;
     --font-headings: "Outfit Variable", sans-serif;
