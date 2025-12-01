@@ -10,13 +10,23 @@ import LinkGroup from "@components/LinkGroup.astro";
 
 <Layout title="Astro Starter">
     <header>
-     <div>
-        <h1>Myrkos' beautiful fucking links</h1>      
-     </div>
+ <div class="waviy">
+   <span style="--i:1">m</span>
+   <span style="--i:2">y</span>
+   <span style="--i:3">r</span>
+   <span style="--i:4">'</span>
+   <span style="--i:5">s</span>
+   </br>
+   <span style="--i:6">l</span>
+   <span style="--i:7">i</span>
+   <span style="--i:8">n</span>
+    <span style="--i:9">k</span>
+    <span style="--i:10">z</span>
+  </div>
       
-        <button id="btnDark">Dark yet Darker Mode</button>
+    <button id="btnDark">Dark yet Darker Mode</button>
 
-        <button id="btnLight">Yet even Lighter Mode</button>
+    <button id="btnLight">Yet even Lighter Mode</button>
 
     </header>
   
@@ -93,22 +103,32 @@ header {
 
 .glow {
   font-size: 80px;
-  color: #fff;
+  color: var(--color-accent);
   text-align: center;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
 }
 
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--color-glowa), 0 0 40px var(--color-glowa), 0 0 50px var(--color-glowa), 0 0 60px var(--color-glowa), 0 0 70px var(--color-glowa);
-  }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px var(--color-glowb), 0 0 40px var(--color-glowb), 0 0 50px var(--color-glowb), 0 0 60px var(--color-glowb), 0 0 70px var(--color-glowb), 0 0 80px var(--color-glowb);
+.waviy {
+  position: relative;
+  padding: 2rem;
+  font-weight: bolder;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 80px;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
   }
 }
-
 
 </style>
 
